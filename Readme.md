@@ -1,15 +1,20 @@
 Step 1:
 cd opencv-3.4.1 					#Enter the document opencv-3.4.1
+
 Step 2:
 mkdir build output 					#Create the folders build and output
+
 Step 3:
 cd build 						#Enter the folder --build
+
 Step 4:
 cmake ../ 
 -DCMAKE_BUILD_TYPE=RELEASE 
 -DCMAKE_INSTALL_PREFIX=../output 			#Use CMake to compile, and the output folder is the output created above.
+
 Step 5:
 make -j && make install 				#Use make to compile, remove the -j if it gets stuck.
+
 Step 6：
 cmake ../ \
 -DOPENCV_FORCE_3RDPARTY_BUILD=ON \
@@ -31,6 +36,7 @@ cmake ../ \
 -DCMAKE_BUILD_TYPE=RELEASE \
 -DCMAKE_INSTALL_PREFIX=../output \
 -DCMAKE_CXX_FLAGS="-s -Os" -DCMAKE_C_FLAGS="-s -Os"	#Set the unwanted library to off
+
 Step 7：
 make -j && make install 				#Use make to compile again, remove the -j if it gets stuck.
 
